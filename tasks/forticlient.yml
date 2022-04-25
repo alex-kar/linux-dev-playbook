@@ -1,0 +1,20 @@
+---
+
+  - name: Add gpg signing key
+    apt_key:
+      url: https://repo.fortinet.com/repo/6.4/ubuntu/DEB-GPG-KEY 
+      state: present
+
+  - name: Adding repository
+    apt_repository:
+      repo: deb [arch=amd64] https://repo.fortinet.com/repo/6.4/ubuntu/ /bionic multiverse 
+      state: present
+      filename: forticlient 
+      update_cache: true
+
+  - name: Installing
+    apt:
+      name: forticlient 
+      state: present
+      force_apt_get: true
+      update_cache: true

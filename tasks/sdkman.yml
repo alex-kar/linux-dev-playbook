@@ -1,0 +1,17 @@
+---
+  - name: Check if SdkMan is installed
+    stat:
+      path: /home/alex/.sdkman
+    register: is_installed 
+
+  - name: Install SdkMan
+    shell: curl -s http://get.sdkman.io
+    args:
+      executable: /bin/bash
+    when: not is_installed.stat.exists
+
+  - name: Ensure presense of .bashrc file
+    file: state=touch path=/home/alex/.bashrc_test
+
+  - name: Add SDKMan in .bashrc file
+    lineinfile: dest=/home/alex/.bashrc_test regexp="\/.sdkman/bin\/sdkman\-init\.sh" line='[[ -s "{{sdkman_folder}}/bin/sdkman-init.sh" && ! $(which sdkman-init.sh) ]] && source "{{sdkman_folder}}/bin/sdkman-init.sh"' 
