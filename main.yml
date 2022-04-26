@@ -12,3 +12,4 @@
     - import_tasks: tasks/kubectl.yml
     - import_tasks: tasks/docker.yml
     - import_tasks: tasks/forticlient.yml
+    - import_tasks: tasks/terminator.yml
