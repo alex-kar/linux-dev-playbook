@@ -1,0 +1,6 @@
+---
+  - name: install xclip 
+    apt:
+      name: xclip 
+      state: present
+      update_cache: true

@@ -13,3 +13,4 @@
     - import_tasks: tasks/docker.yml
     - import_tasks: tasks/forticlient.yml
     - import_tasks: tasks/terminator.yml
+    - import_tasks: tasks/xclip.yml
