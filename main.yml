@@ -15,3 +15,4 @@
     - import_tasks: tasks/terminator.yml
     - import_tasks: tasks/xclip.yml
     - import_tasks: tasks/vscode.yml
+    - import_tasks: tasks/jq.yml
