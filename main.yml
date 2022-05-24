@@ -16,3 +16,4 @@
     - import_tasks: tasks/xclip.yml
     - import_tasks: tasks/vscode.yml
     - import_tasks: tasks/jq.yml
+    - import_tasks: tasks/drawio.yml

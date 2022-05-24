@@ -1,0 +1,5 @@
+---
+  - name: install Draw.io 
+    snap:
+      name: drawio 
+      classic: true 
