@@ -17,3 +17,4 @@
     - import_tasks: tasks/vscode.yml
     - import_tasks: tasks/jq.yml
     - import_tasks: tasks/drawio.yml
+    - import_tasks: tasks/dbeaver.yml

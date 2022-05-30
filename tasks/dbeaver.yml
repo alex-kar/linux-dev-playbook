@@ -1,0 +1,13 @@
+---
+  - name: add dbeaver apt repository
+    apt_repository:
+      repo: 'ppa:serge-rider/dbeaver-ce'
+      state: present
+      filename: dbeaver-ce
+      update_cache: true
+
+  - name: install DBeaver
+    apt:
+      name: dbeaver-ce
+      state: present
+      update_cache: true
