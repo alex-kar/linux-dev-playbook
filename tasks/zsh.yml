@@ -1,0 +1,8 @@
+---
+  - name: install zsh
+    apt:
+      name: zsh
+      state: present
+      update_cache: true
+  - name: change shell to zsh
+    shell: chsh -s `which zsh`

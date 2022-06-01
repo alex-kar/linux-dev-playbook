@@ -1,0 +1,6 @@
+---
+  - name: install i3 
+    apt:
+      name: i3
+      state: present
+      update_cache: true
