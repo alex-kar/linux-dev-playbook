@@ -20,3 +20,4 @@
     - import_tasks: tasks/dbeaver.yml
     - import_tasks: tasks/i3.yml
     - import_tasks: tasks/fzf.yml
+    - import_tasks: tasks/ripgrep.yml

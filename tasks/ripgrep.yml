@@ -1,0 +1,6 @@
+---
+  - name: install ripgrep 
+    apt:
+      name: ripgrep 
+      state: present
+      update_cache: true
