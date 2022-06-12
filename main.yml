@@ -1,7 +1,12 @@
 ---
 - hosts: all
+  vars:
+    versions:
+      evans: 0.10.6
+    evans:
+      tarball_url: "https://github.com/ktr0731/evans/releases/download/v{{ versions.evans }}/evans_linux_amd64.tar.gz"
+      install_path: /usr/local/bin
   become: true
-  
   tasks:
     - import_tasks: tasks/vim.yml
     - import_tasks: tasks/curl.yml
@@ -21,3 +26,4 @@
     - import_tasks: tasks/i3.yml
     - import_tasks: tasks/fzf.yml
     - import_tasks: tasks/ripgrep.yml
+    - import_tasks: tasks/evans.yml
