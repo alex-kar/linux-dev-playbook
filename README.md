@@ -12,4 +12,4 @@ TODO:
 [ ] SdkMan
 [ ] Forticlient
 [ ] Node.js 
-[ ] Evans (gRPC client)
+[v] Evans (gRPC client)

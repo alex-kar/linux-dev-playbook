@@ -27,3 +27,4 @@
     - import_tasks: tasks/fzf.yml
     - import_tasks: tasks/ripgrep.yml
     - import_tasks: tasks/evans.yml
+    - import_tasks: tasks/tldr.yml

@@ -1,0 +1,6 @@
+---
+  - name: install tldr pages
+    apt:
+      name: tldr
+      state: present
+      update_cache: true
