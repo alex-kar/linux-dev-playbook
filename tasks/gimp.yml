@@ -1,0 +1,6 @@
+---
+  - name: install GIMP (GNU image manipulation program)
+    apt:
+      name: gimp
+      state: present
+      update_cache: true

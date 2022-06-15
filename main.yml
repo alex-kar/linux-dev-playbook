@@ -28,3 +28,4 @@
     - import_tasks: tasks/ripgrep.yml
     - import_tasks: tasks/evans.yml
     - import_tasks: tasks/tldr.yml
+    - import_tasks: tasks/gimp.yml
