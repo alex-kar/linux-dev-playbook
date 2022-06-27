@@ -1,0 +1,6 @@
+---
+  - name: install sshpass
+    apt:
+      name: sshpass
+      state: present
+      update_cache: true
