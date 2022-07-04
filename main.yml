@@ -30,3 +30,4 @@
     - import_tasks: tasks/tldr.yml
     - import_tasks: tasks/gimp.yml
     - import_tasks: tasks/sshpass.yml
+    - import_tasks: tasks/zoom.yml
