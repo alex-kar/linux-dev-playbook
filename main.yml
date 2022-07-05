@@ -31,3 +31,4 @@
     - import_tasks: tasks/gimp.yml
     - import_tasks: tasks/sshpass.yml
     - import_tasks: tasks/zoom.yml
+    - import_tasks: tasks/wireshark.yml
