@@ -1,0 +1,5 @@
+---
+  - name: install pinta
+    snap:
+      name: pinta 
+      classic: true
