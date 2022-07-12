@@ -1,0 +1,4 @@
+- name: install "n" node.js version management 
+  npm:
+    name: n
+    global: yes

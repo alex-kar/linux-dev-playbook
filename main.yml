@@ -32,3 +32,4 @@
     - import_tasks: tasks/sshpass.yml
     - import_tasks: tasks/zoom.yml
     - import_tasks: tasks/wireshark.yml
+    - import_tasks: tasks/nodejs-packages.yml
