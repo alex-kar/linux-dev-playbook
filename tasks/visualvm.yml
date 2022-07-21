@@ -1,0 +1,6 @@
+---
+  - name: install visualvm 
+    apt:
+      name: visualvm
+      state: present
+      update_cache: true
