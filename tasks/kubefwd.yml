@@ -1,0 +1,5 @@
+---
+- name: Install kubefwd .deb package from the internet
+  ansible.builtin.apt:
+    deb: https://github.com/txn2/kubefwd/releases/download/{{ versions.kubefwd }}/kubefwd_amd64.deb 
+  tags: kubefwd
