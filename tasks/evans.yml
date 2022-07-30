@@ -1,12 +1,12 @@
 ---
 - name: Check if Evans already exists 
   stat:
-    path: "{{ evans.install_path }}/evans"
+    path: "{{ install_path }}/evans"
   register: installed 
   tags: evans
 
 - name: Check Evans version 
-  command: "{{ evans.install_path }}/evans --version"
+  command: "{{ install_path }}/evans --version"
   register: installed_version 
   when: "installed.stat.exists"
   changed_when: false
@@ -16,15 +16,15 @@
 - block:
   - name: Downloading Evans
     get_url:
-      url: "{{ evans.tarball_url }}"
-      dest: "/tmp/{{ versions.evans}}"
+      url: "https://github.com/ktr0731/evans/releases/download/v{{ versions.evans }}/evans_linux_amd64.tar.gz"
+      dest: "/tmp/evans{{ versions.evans}}"
     register: evans_tar
     tags: evans
 
   - name: Unpacking Evans
     unarchive:
       copy: no
-      dest: "{{ evans.install_path }}"
+      dest: "{{ install_path }}"
       src: "{{ evans_tar.dest }}"
     tags: evans
   when: "not installed.stat.exists or versions.evans is not defined or versions.evans not in installed_version.stdout"

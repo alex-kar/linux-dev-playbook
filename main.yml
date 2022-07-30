@@ -1,12 +1,11 @@
 ---
 - hosts: all
   vars:
+    install_path: /usr/local/bin
     versions:
       evans: 0.10.6
       kubefwd: 1.22.3
-    evans:
-      tarball_url: "https://github.com/ktr0731/evans/releases/download/v{{ versions.evans }}/evans_linux_amd64.tar.gz"
-      install_path: /usr/local/bin
+      lens: 5.5.4-latest.20220609.2
   become: true
   tasks:
     - import_tasks: tasks/vim.yml
@@ -36,3 +35,5 @@
     - import_tasks: tasks/nodejs-packages.yml
     - import_tasks: tasks/visualvm.yml
     - import_tasks: tasks/kubefwd.yml
+    - import_tasks: tasks/lens.yml
+    - import_tasks: tasks/golang.yml

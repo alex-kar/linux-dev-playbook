@@ -1,0 +1,5 @@
+---
+- name: Install Lens
+  ansible.builtin.apt:
+    deb: https://api.k8slens.dev/binaries/Lens-{{ versions.lens }}.amd64.deb
+  tags: lens
