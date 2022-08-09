@@ -1,0 +1,5 @@
+---
+  - name: install discord
+    snap:
+      name: discord 
+      classic: true

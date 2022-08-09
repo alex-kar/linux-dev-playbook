@@ -37,3 +37,5 @@
     - import_tasks: tasks/kubefwd.yml
     - import_tasks: tasks/lens.yml
     - import_tasks: tasks/golang.yml
+    - import_tasks: tasks/telepresence.yml
+    - import_tasks: tasks/discord.yml
