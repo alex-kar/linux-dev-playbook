@@ -1,0 +1,6 @@
+---
+  - name: install GNU Stow
+    apt:
+      name: stow
+      state: present
+      update_cache: true
