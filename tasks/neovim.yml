@@ -1,0 +1,5 @@
+---
+  - name: install neovim
+    snap:
+      name: nvim
+      classic: true 
