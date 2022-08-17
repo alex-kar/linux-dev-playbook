@@ -40,3 +40,4 @@
     - import_tasks: tasks/telepresence.yml
     - import_tasks: tasks/discord.yml
     - import_tasks: tasks/stow.yml
+    - import_tasks: tasks/neovim.yml
