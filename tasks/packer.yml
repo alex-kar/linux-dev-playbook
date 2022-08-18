@@ -1,0 +1,6 @@
+---
+  - name: install packer 
+    apt:
+      name: packer
+      state: present
+      update_cache: true
