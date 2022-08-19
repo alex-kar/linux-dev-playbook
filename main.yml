@@ -6,6 +6,7 @@
       evans: 0.10.6
       kubefwd: 1.22.3
       lens: 5.5.4-latest.20220609.2
+      neovim: 0.7.2
   become: true
   tasks:
     - import_tasks: tasks/vim.yml

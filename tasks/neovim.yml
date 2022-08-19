@@ -1,5 +1,5 @@
 ---
   - name: install neovim
-    snap:
-      name: nvim
-      classic: true 
+    ansible.builtin.apt:
+      deb: https://github.com/neovim/neovim/releases/download/v{{ versions.neovim }}/nvim-linux64.deb
+    tags: neovim
