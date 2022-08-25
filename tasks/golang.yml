@@ -1,5 +1,35 @@
 ---
-  - name: install Golang
-    snap:
-      name: go
-      classic: true
+- name: Check if Go already exists 
+  stat:
+    path: "{{ install_path.go }}/go"
+  register: installed 
+  tags: go
+
+- name: Check Go version 
+  command: "{{ install_path.go }}/go/bin/go version"
+  register: installed_version 
+  when: "installed.stat.exists"
+  changed_when: false
+  failed_when: false
+  tags: go
+
+- block:
+  - name: Downloading Go 
+    get_url:
+      url: "https://go.dev/dl/go{{ versions.go }}.linux-amd64.tar.gz"
+      dest: "/tmp/golang{{ versions.go}}"
+    register: go_tar
+    tags: go
+
+  - name: remove previous installation
+    file:
+      state: absent
+      path: "{{ install_path }}/go"
+
+  - name: Unpacking Go 
+    unarchive:
+      copy: no
+      dest: "{{ install_path.go }}"
+      src: "{{ go_tar.dest }}"
+    tags: go
+    when: "not installed.stat.exists or versions.go is not defined or versions.go|string not in installed_version.stdout"

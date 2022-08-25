@@ -3,8 +3,10 @@
   vars:
     install_path: 
       evans: /usr/local/bin
+      go: /usr/local
     versions:
       evans: 0.10.6
+      go: 1.19
       kubefwd: 1.22.3
       lens: 5.5.4-latest.20220609.2
       neovim: 0.7.2
