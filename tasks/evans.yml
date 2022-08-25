@@ -1,12 +1,12 @@
 ---
 - name: Check if Evans already exists 
   stat:
-    path: "{{ install_path }}/evans"
+    path: "{{ install_path.evans }}/evans"
   register: installed 
   tags: evans
 
 - name: Check Evans version 
-  command: "{{ install_path }}/evans --version"
+  command: "{{ install_path.evans }}/evans --version"
   register: installed_version 
   when: "installed.stat.exists"
   changed_when: false
@@ -24,7 +24,7 @@
   - name: Unpacking Evans
     unarchive:
       copy: no
-      dest: "{{ install_path }}"
+      dest: "{{ install_path.evans }}"
       src: "{{ evans_tar.dest }}"
     tags: evans
   when: "not installed.stat.exists or versions.evans is not defined or versions.evans not in installed_version.stdout"

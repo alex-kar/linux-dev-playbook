@@ -1,7 +1,8 @@
 ---
 - hosts: all
   vars:
-    install_path: /usr/local/bin
+    install_path: 
+      evans: /usr/local/bin
     versions:
       evans: 0.10.6
       kubefwd: 1.22.3
