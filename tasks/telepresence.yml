@@ -1,7 +1,7 @@
 ---
 - name: install Telepresence
   ansible.builtin.get_url:
-    url: https://app.getambassador.io/download/tel2/linux/amd64/latest/telepresence
+    url: https://app.getambassador.io/download/tel2/linux/amd64/{{ versions.telepresence }}/telepresence
     dest: /usr/local/bin
     mode: "a+x"
   tags: telepresence
