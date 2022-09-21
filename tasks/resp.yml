@@ -1,0 +1,6 @@
+---
+  - name: install RESP (RedisDesktopManager) 
+    snap:
+      name: redis-desktop-manager 
+      classic: true
+    tags: resp
