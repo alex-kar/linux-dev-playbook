@@ -9,7 +9,7 @@
       go: 1.19
       telepresence: 2.4.10 # switch to "latest" once https://github.com/telepresenceio/telepresence/issues/2669 resolved
       kubefwd: 1.22.3
-      lens: 5.5.4-latest.20220609.2
+      lens: 2022.10.70653-latest
       neovim: 0.7.2
   become: true
   tasks:
