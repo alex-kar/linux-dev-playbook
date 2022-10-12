@@ -49,3 +49,4 @@
     - import_tasks: tasks/packer.yml
     - import_tasks: tasks/tree.yml
     - import_tasks: tasks/resp.yml
+    - import_tasks: tasks/postman.yml
