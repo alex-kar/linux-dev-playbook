@@ -1,0 +1,5 @@
+---
+  - name: install kubectx 
+    snap:
+      name: kubectx 
+      classic: true 

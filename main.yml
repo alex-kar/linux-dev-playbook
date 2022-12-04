@@ -20,6 +20,7 @@
     - import_tasks: tasks/idea.yml
     - import_tasks: tasks/maven.yml
     - import_tasks: tasks/kubectl.yml
+    - import_tasks: tasks/kubectx.yml
     - import_tasks: tasks/docker.yml
     - import_tasks: tasks/forticlient.yml
     - import_tasks: tasks/terminator.yml
