@@ -27,6 +27,7 @@
     - import_tasks: tasks/xclip.yml
     - import_tasks: tasks/vscode.yml
     - import_tasks: tasks/jq.yml
+    - import_tasks: tasks/yq.yml
     - import_tasks: tasks/drawio.yml
     - import_tasks: tasks/dbeaver.yml
     - import_tasks: tasks/i3.yml
